@@ -16,6 +16,7 @@ def test_init_creates_template_files():
         assert Path("CLAUDE.md").exists()
         assert Path("TASK.md").exists()
         assert Path("PROJECT_RULES.md").exists()
+        assert Path("AGENTS.md").exists()
 
 
 def test_init_keeps_existing_file_when_overwrite_is_declined():

@@ -8,7 +8,7 @@ README = Path(__file__).with_name("README.md").read_text(encoding="utf-8")
 
 setup(
     name="ai_sop_toolkit",
-    version="1.0.0",
+    version="1.3.0",
     packages=find_packages(),
     include_package_data=True,
     package_data={
@@ -23,7 +23,7 @@ setup(
         ],
     },
     author="Wang Peiquan",
-    description="A CLI toolkit for bootstrapping AI development SOP files.",
+    description="A CLI toolkit for bootstrapping an AI Agent Team development SOP.",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/perry121108-dotcom/fluffy-palm-tree.git",

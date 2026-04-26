@@ -1,10 +1,10 @@
 # ai_sop_toolkit
 
-A lightweight Python CLI toolkit that bootstraps an AI-driven development SOP into any new project directory.
+A lightweight Python CLI toolkit that bootstraps an AI Agent Team development SOP into any new project directory.
 
 ## 中文說明
 
-`ai_sop_toolkit` 是一個輕量的 Python CLI 工具，目的是在任何新專案資料夾中，快速建立一套 AI 協作開發 SOP。
+`ai_sop_toolkit` 是一個輕量的 Python CLI 工具，目的是在任何新專案資料夾中，快速建立一套 AI Agent Team 協作開發 SOP。
 
 安裝完成後，只要在目標專案資料夾執行：
 
@@ -18,8 +18,15 @@ ai-sop init
 - `CLAUDE.md`
 - `TASK.md`
 - `PROJECT_RULES.md`
+- `AGENTS.md`
 
-這些檔案可用來統一 AI 協作時的需求釐清、任務拆解、驗證流程與開發規範。
+這些檔案可用來統一 AI 協作時的需求釐清、任務拆解、驗證流程、代理人職位切換與開發規範。
+
+### V1.3 新增重點
+
+- 新增 `AGENTS.md`，定義 PM、Architect、Builder、Tester、Liaison 五種角色
+- 讓 AI 能根據 `TASK.md` 階段切換對應職位
+- 在每次完成任務後，透過 Liaison 模式做摘要與交棒
 
 ### 適合的使用情境
 
@@ -67,8 +74,9 @@ After installation, run `ai-sop init` inside a target project folder to generate
 - `CLAUDE.md`
 - `TASK.md`
 - `PROJECT_RULES.md`
+- `AGENTS.md`
 
-These files help standardize requirement discovery, task tracking, validation, and development guardrails for AI-assisted coding workflows.
+These files help standardize requirement discovery, task tracking, validation, agent role switching, and development guardrails for AI-assisted coding workflows.
 
 ## Project Structure
 
@@ -118,6 +126,7 @@ The CLI will copy the built-in templates into the current working directory. If 
 - `CLAUDE.md`: Project rules and prohibitions.
 - `TASK.md`: Task progress tracking template.
 - `PROJECT_RULES.md`: Project alignment template for goals, scope, and constraints.
+- `AGENTS.md`: Agent Team role definitions and handover protocol.
 
 ## Local Testing
 
@@ -147,7 +156,7 @@ If you move this project to a different repository later, update the URLs in `se
 
 ## Development Notes
 
-- Package name: `ai_sop_toolkit`
+- Package name: `ai_sop_toolkit` (V1.3)
 - CLI command: `ai-sop`
 - Main CLI implementation: `ai_sop_toolkit/cli.py`
 - Template assets live in: `ai_sop_toolkit/templates/`

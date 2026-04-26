@@ -6,22 +6,23 @@ import click
 
 @click.group()
 def main():
-    """AI 開發系統化 SOP 工具套件"""
+    """AI 開發系統化 SOP 工具套件 (V1.3 - Agent Team 架構)"""
 
 
 @main.command()
 def init():
-    """在當前目錄初始化 AI 開發 Skill 環境"""
+    """在當前目錄初始化 Agent Team 架構開發環境"""
     template_dir = Path(__file__).parent / "templates"
     current_dir = Path.cwd()
 
-    click.echo("🚀 正在注入 AI 開發系統化 SOP 技能...")
+    click.echo("🚀 正在注入 Agent Team 開發小隊技能 (V1.3)...")
 
     mapping = {
         "cursorrules.tpl": ".cursorrules",
         "claude_md.tpl": "CLAUDE.md",
         "task_md.tpl": "TASK.md",
         "project_rules_tpl.md": "PROJECT_RULES.md",
+        "agents_md.tpl": "AGENTS.md",
     }
 
     for tpl, target in mapping.items():
@@ -36,8 +37,8 @@ def init():
             shutil.copy(source, dest)
             click.echo(f"✅ 已建立 {target}")
 
-    click.echo("\n🎉 初始化成功！現在你可以讓 AI 讀取這些檔案並開始開發。")
-    click.echo("提示：請先讓 AI 閱讀 PROJECT_RULES.md 以同步開發目標。")
+    click.echo("\n🎉 初始化成功！")
+    click.echo("💡 AI 現在會根據 AGENTS.md 自動切換職位（PM, Architect, Builder, Tester, Liaison）。")
 
 
 if __name__ == "__main__":
